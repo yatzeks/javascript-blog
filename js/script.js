@@ -1,21 +1,23 @@
-var buttonTest;
-// tu będą wymienione pozostałe zmienne guzików, np. buttonRock
+'use strict';
 
-buttonTest = document.getElementById('button-test');
-// tu będą kolejne linie kodu, w których do zmiennych będą przypisane elementy znalezione po id
+function titleClickHandler(event){
+  console.log('Link was clicked!');
 
-function buttonClicked(argButtonName){
-    clearMessages();
-    console.log(argButtonName + ' został kliknięty");
+  /* remove class 'active' from all article links  */
 
-    // tu znajdzie się cała dotychczasowa zawartość pliku js/script.js
-    // czyli efekt ćwiczenia z poprzedniego submodułu
-    // z drobną zmianą dot. zmiennej playerMove (wspomnieliśmy o tym powyżej)
+  /* add class 'active' to the clicked link */
+
+  /* remove class 'active' from all articles */
+
+  /* get 'href' attribute from the clicked link */
+
+  /* find the correct article using the selector (value of 'href' attribute) */
+
+  /* add class 'active' to the correct article */
 }
 
-buttonTest.addEventListener('click', function(){
-    buttonClicked('Test button')
-});
+const links = document.querySelectorAll('.titles a');
 
-// tu będą kolejne powiązania guzików z funkcją buttonClicked
-// (każda z innym argumentem)
+for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
